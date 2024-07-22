@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Carousel</title>
+    <link rel="stylesheet" href="/src/styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="#" class="logo">Logo</a>
+        <div class="navbar-right">
+          <button id="theme-toggle-button">
+            <span id="theme-icon" class="material-icons">dark_mode</span>
+          </button>
+          <button id="change-style-button">Change Style</button>
+          <button id="wishlist-button">
+            Wishlist <span id="wishlist-count" class="count">0</span>
+          </button>
+          <button id="cart-button">
+            Cart <span id="cart-count" class="count">0</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <h1 class="section-title">OUR PRODUCTS (style 1)</h1>
+      <div class="swiper">
+        <div class="swiper-wrapper"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </main>
+
+    <div id="wishlist-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close-wishlist-modal">&times;</span>
+        <h2>Wishlist</h2>
+        <div id="wishlist-items"></div>
+      </div>
+    </div>
+
+    <div id="cart-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close-cart-modal">&times;</span>
+        <h2>Cart</h2>
+        <div id="cart-items"></div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+    <script src="/src/theme-toggle.js"></script>
+  </body>
+</html>
